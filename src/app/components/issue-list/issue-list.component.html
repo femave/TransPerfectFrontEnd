@@ -1,12 +1,13 @@
-<div>
+<div class="header">
   <h1>{{title}}</h1>
 </div>
 
-<div>
-  <ul>
-    <li *ngFor="let item of issues">
-      <a href="issue/{{item.number}}"><p>{{item.title}}</p></a>
-      <p><small>#{{item.number}} opened by <a href="{{item.user.html_url}}">{{item.user.login}}</a></small></p>
-    </li>
-  </ul>
+<div class="container">
+  <mat-list>
+      <mat-list-item class="matList" *ngFor="let item of issues">
+        <img matListAvatar src="{{item.user.avatar_url}}" alt="...">
+        <a matLine href="issue/{{item.number}}">{{item.title}}</a>
+        <p matLine><small>#{{item.number}} created at {{item.created_at | date}} by <a href="{{item.user.html_url}}">{{item.user.login}}</a></small></p>
+      </mat-list-item>
+    </mat-list>
 </div>

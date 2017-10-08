@@ -1,0 +1,30 @@
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #1966D6;
+}
+
+.header{
+    border: 1px solid #E1E4E8;
+    background-color: #F6F8FA;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 10px;
+}
+.header img{
+    height: 60px;
+    width: 60px;
+}
+
+.content{
+    padding: 10px;
+    box-shadow: 0 2px 6px -2px rgba(22,22,22,0.45);
+    max-width: 100%;
+}

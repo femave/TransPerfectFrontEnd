@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
+// ---------> angular material
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatListModule, MatGridListModule} from '@angular/material';
+
 import { AppComponent } from './app.component';
 import { IssueListComponent } from './components/issue-list/issue-list.component';
 import { IssueComponent } from './components/issue/issue.component';
@@ -17,6 +21,9 @@ import { IssueService } from './services/github-issues.service'
   imports: [
     BrowserModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatListModule,
+    MatGridListModule,
     RouterModule.forRoot([
       {
         path: '',

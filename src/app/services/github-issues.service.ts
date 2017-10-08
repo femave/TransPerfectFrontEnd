@@ -1,6 +1,7 @@
 
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { RequestOptions, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -13,8 +14,10 @@ export class IssueService {
     .map(res => res);
    }
 
-   getIssuesPage(number){
-     return this.http.get(`https://api.github.com/repos/angular/angular/issues/${number}`)
+   getIssuesPage(number) {
+     return this.http.get(`https://api.github.com/repos/angular/angular/issues/${number}`,{
+       headers: new HttpHeaders().set('Accept', 'application/vnd.github.VERSION.html+json')
+     })
      .map(res => res);
    }
 }

@@ -1,12 +1,23 @@
 <div>
-
-  <h2>{{issue.title}}</h2>
-  <div>
+  <div class="header">
     <img src="{{issue.user.avatar_url}}" alt=""> 
-    <p>{{issue.user.login}}</p>
+    <p>{{issue.title}} </p>      
+    <a href="{{issue.user.url}}"><p><small>{{issue.user.login}}</small></p></a>
   </div>
-  <div>
-    <p>{{issue.body}}</p>
+  <div class="content" [innerHTML]="issue.body_html">
   </div>
+ 
   
+
+  <!-- <mat-list>
+      <mat-list-item>
+        <h2>{{issue.title}}</h2>
+        <div>
+            <img src="{{issue.user.avatar_url}}" alt=""> 
+            <p>{{issue.user.login}}</p>
+        </div>
+        <div matLine [innerHTML]="issue.body_html"></div>
+      </mat-list-item>
+    </mat-list> -->
 </div>
+

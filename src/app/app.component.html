@@ -1,15 +1,4 @@
-<!-- <div>
+<div class="container">
   <h1>{{title}}</h1>
-  <h3>{{subtitle}}</h3>
+  <router-outlet></router-outlet>
 </div>
-
-<div>
-  <ul>
-    <li *ngFor="let item of issues">
-      <a href="issue/{{item.number}}"><p>{{item.title}}</p></a>
-      <p><small>#{{item.number}} opened by <a href="{{item.user.html_url}}">{{item.user.login}}</a></small></p>
-    </li>
-  </ul>
-</div> -->
-<h1>{{title}}</h1>
-<router-outlet></router-outlet>

@@ -9,13 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class IssueComponent{
   public issue;
+  public body;
 
   constructor(private issueService: IssueService, private route: ActivatedRoute){
     this.route.params.subscribe(params => {    
       this.issueService.getIssuesPage(params['id'])
       .subscribe(response => {
         this.issue = response;
-        console.log(this.issue);
+        this.body = JSON.stringify(this.issue.body_html);
+        console.log(response)
       })
     })
     
