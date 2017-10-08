@@ -15,7 +15,6 @@ export class IssueListComponent {
     this.issueService.getIssues()
     .subscribe(response => {
       this.issues = response;
-      console.log(this.issues);
     })
   }
   

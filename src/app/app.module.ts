@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -35,6 +35,7 @@ import { IssueService } from './services/github-issues.service'
       }
     ])
   ],
+  schemas: [NO_ERRORS_SCHEMA],
   providers: [IssueService],
   bootstrap: [AppComponent]
 })

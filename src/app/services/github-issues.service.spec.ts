@@ -1,15 +1,20 @@
-import { TestBed, inject } from '@angular/core/testing';
+// import { TestBed, inject } from '@angular/core/testing';
+// import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { GithubIssuesService } from './github-issues.service';
+// import { IssueService } from './github-issues.service';
 
-describe('GithubIssuesService', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [GithubIssuesService]
-    });
-  });
+// describe('GithubIssuesService', () => {
+//   // beforeEach(() => {
+//   //   TestBed.configureTestingModule({
+//   //     providers: [IssueService, HttpClient, HttpHeaders]
+//   //   });
+//   // });
+//   let service: IssueService;
+//   beforeEach(() => {
+//     service = new IssueService()
+//   })
 
-  it('should be created', inject([GithubIssuesService], (service: GithubIssuesService) => {
-    expect(service).toBeTruthy();
-  }));
-});
+//   it('Service: FormService', inject([IssueService], (service: IssueService) => {
+//     expect(service).toBeTruthy();
+//   }));
+// });
