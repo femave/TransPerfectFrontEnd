@@ -1,16 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { IssueListComponent } from './components/issue-list/issue-list.component';
+import { IssueComponent } from './components/issue/issue.component';
+import { IssueService } from './services/github-issues.service'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IssueListComponent,
+    IssueComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: IssueListComponent
+      },
+      {
+        path: 'issue/:id',
+        component: IssueComponent
+      }
+    ])
   ],
-  providers: [],
+  providers: [IssueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
