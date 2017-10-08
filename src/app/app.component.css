@@ -1,9 +1,15 @@
 h1{
     text-align: center;
-    color: #1966D6;
+    color: white;
+    margin: 0px;
 }
 
 .container{
     width: 90%;
     margin: 0 auto;
+}
+
+.header{
+    background-color: #24292E;
+    padding: 25px;
 }
