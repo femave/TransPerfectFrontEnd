@@ -9,9 +9,9 @@
 //   //     providers: [IssueService, HttpClient, HttpHeaders]
 //   //   });
 //   // });
-//   let service: IssueService;
+  
 //   beforeEach(() => {
-//     service = new IssueService()
+//     service = new IssueService.getIssues()
 //   })
 
 //   it('Service: FormService', inject([IssueService], (service: IssueService) => {
