@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { IssueService } from '../../services/github-issues.service';
 
 @Component({
   selector: 'app-issue-list',
   templateUrl: './issue-list.component.html',
   styleUrls: ['./issue-list.component.css']
 })
-export class IssueListComponent implements OnInit {
+export class IssueListComponent {
+  public issues;
 
-  constructor() { }
+  title = 'Issues list';
 
-  ngOnInit() {
+  constructor(private issueService: IssueService){
+    this.issueService.getIssues()
+    .subscribe(response => {
+      this.issues = response;
+      console.log(this.issues);
+    })
   }
-
+  
 }
